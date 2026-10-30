@@ -20,4 +20,4 @@
   - metadata, licence and provenance, SHA-256;
   - bit-reproducibility of every WAV from its recipe;
   - API and CLI.
-- CI on Linux, macOS and Windows (Python 3.9 / 3.12), plus a wheel-content check.
+- CI on Linux, macOS and Windows (Python 3.10 / 3.13, plus 3.9 on macOS), plus a wheel-content check.

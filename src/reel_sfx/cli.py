@@ -46,7 +46,7 @@ def main(argv=None) -> int:
         for r in list_sounds():
             dst = out / r['file']; dst.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(path(r['id']), dst)
         shutil.copyfile(path(list_sounds()[0]['id']).parents[1] / 'sounds.json', out / 'sounds.json')
-        print(f'{len(list_sounds())} sounds → {out}'); return 0
+        print(f'{len(list_sounds())} sounds -> {out}'); return 0
     if a.cmd == 'render':
         y, anc = render(a.id, a.seed, a.sr); write_wav(a.out, y, a.sr)
         print(f'{a.out}  ({len(y) / a.sr:.3f} s, anchor {anc:.4f} s)'); return 0

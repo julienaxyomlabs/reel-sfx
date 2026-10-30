@@ -11,4 +11,4 @@ sid, out = (sys.argv[1], Path(sys.argv[2])) if len(sys.argv) == 3 else ('whoosh.
 for seed in range(1, 6):
     y, anchor = reel_sfx.render(sid, seed=seed)
     reel_sfx.write_wav(out / f'{sid}_seed{seed}.wav', y, 48000)
-print(f'5 variations of {sid} → {out}  (anchor {anchor:.3f} s)')
+print(f'5 variations of {sid} -> {out}  (anchor {anchor:.3f} s)')

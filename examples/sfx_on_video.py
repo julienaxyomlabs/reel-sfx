@@ -30,7 +30,7 @@ def main(video, cues_path, out):
     reel_sfx.write_wav(tmp / 'mix.wav', mixed, 48000)
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', video, '-i', str(tmp / 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0',
                     '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-shortest', out], check=True)
-    print('→', out)
+    print('->', out)
 
 
 if __name__ == '__main__':

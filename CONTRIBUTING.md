@@ -36,5 +36,5 @@ pip install -e ".[test]"
 pytest -q
 ```
 
-CI runs the tests on Linux, macOS and Windows with Python 3.9 and 3.12, then builds the wheel and checks its
+CI runs the tests on Linux, macOS and Windows with Python 3.10 and 3.13 (plus 3.9 on macOS), then builds the wheel and checks its
 contents.
