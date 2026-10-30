@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reel-sfx"
+version = "0.1.0"
+description = "Original procedural sound effects (CC0) and a frame-accurate cue placer for short-form video editing."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT AND CC0-1.0"
+license-files = ["LICENSE", "LICENSE-AUDIO"]
+authors = [{ name = "julienaxyomlabs" }]
+keywords = ["sound effects", "sfx", "video editing", "reels", "procedural audio", "cc0", "synthesis"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+  "Topic :: Multimedia :: Video :: Non-Linear Editor",
+]
+dependencies = ["numpy>=1.20"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+reel-sfx = "reel_sfx.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/julienaxyomlabs/reel-sfx"
+Issues = "https://github.com/julienaxyomlabs/reel-sfx/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+reel_sfx = ["sounds/sounds.json", "sounds/*/*.wav"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

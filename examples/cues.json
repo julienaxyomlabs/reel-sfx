@@ -1,0 +1,8 @@
+[
+  {"t": 0.50, "id": "whoosh.soft",  "label": "cut to the title"},
+  {"t": 0.90, "id": "pop.short",    "gain_db": -2, "pan": -0.3, "label": "sticker appears"},
+  {"t": 2.00, "id": "click.ui",     "label": "cursor clicks"},
+  {"t": 2.60, "id": "bell.ding",    "gain_db": -4, "label": "notification"},
+  {"t": 4.50, "id": "riser.noise",  "label": "build into the reveal (the riser ENDS here)"},
+  {"t": 4.50, "id": "impact.sub",   "label": "the reveal"}
+]
